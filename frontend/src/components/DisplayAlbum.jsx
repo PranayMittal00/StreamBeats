@@ -57,7 +57,7 @@ const DisplayAlbum = () => {
                 <img className='m-auto w-4' src={assets.clock_icon} alt="" />
             </div>
             <hr />
-            {songsData.filter((item) => item.album === item.name).map((item, index) => (
+            {songsData.filter((item) => item.album === albumData.name).map((item, index) => (
                 <div
                     key={index}
                     onClick={() => hoveredSongId === item._id && playStatus ? pause() : playWithId(item._id)}
